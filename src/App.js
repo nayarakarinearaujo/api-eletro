@@ -3,9 +3,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Seja bem vindo(a) a loja!</h1>
-      <ProdutoList/>
+    <div>
+       <div className="header">
+
+       </div>
+
+      <div className="App">
+        <h1>MegaTech</h1>
+        <ProdutoList/>
+      </div>
     </div>
   );
 }

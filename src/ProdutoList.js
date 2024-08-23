@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Caminho direto das imagens
-const imgProduto1 = require('./image/camera.jpg').default;
-const imgProduto2 = require('./image/phone2.jpg').default;
+const imgProduto1 = require('./image/note1.jpg').default;
+const imgProduto2 = require('./camera.jpg').default;
 
 const placeholder = 'https://via.placeholder.com/200';
 
@@ -37,7 +37,8 @@ function ProdutoList() {
 
   return (
     <div>
-      <h1>Lista de Produtos</h1>
+      
+      <h2>Lista de Produtos</h2>
       <ul>
         {produtos.map(produto => (
           <li key={produto.id}>
