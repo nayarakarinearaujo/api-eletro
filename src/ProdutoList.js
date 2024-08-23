@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import imgProduto1 from './note1.jpg';
-import imgProduto2 from '../src/image/phone2.jpg';
+// Caminho direto das imagens
+const imgProduto1 = require('./image/camera.jpg').default;
+const imgProduto2 = require('./image/phone2.jpg').default;
 
 const placeholder = 'https://via.placeholder.com/200';
 
-const imagens = [
-    { id: 1, src: imgProduto1 },
-    { id: 2, src: imgProduto2 },
-    { id: 3, src: 'https://example.com/image3.jpg' },
-    // Adicione mais imagens e URLs conforme necessário
-  ];
+const imagens = {
+  1: imgProduto1,
+  2: imgProduto2,
+  // Você pode adicionar mais imagens conforme necessário
+};
 
 function ProdutoList() {
   const [produtos, setProdutos] = useState([]);
