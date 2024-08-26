@@ -1,0 +1,41 @@
+/* ProdutoList.css */
+
+/* Estilos para o contêiner principal */
+.products {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+/* Estilos para a lista de produtos */
+.products-item {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ativa o flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+/* Estilos para cada item da lista */
+.product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    flex: 1 1 calc(33% - 20px); /* Ajusta a largura dos itens */
+    /* O cálculo aqui considera a margem entre os itens */
+}
+
+/* Estilos para o título do produto */
+.product h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Estilos para o parágrafo do produto */
+.product p {
+    margin: 5px 0;
+    color: #666;
+}

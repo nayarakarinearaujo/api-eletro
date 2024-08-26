@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-// Caminho direto das imagens
-const imgProduto1 = require('./image/note1.jpg').default;
-const imgProduto2 = require('./camera.jpg').default;
-
-const placeholder = 'https://via.placeholder.com/200';
-
-const imagens = {
-  1: imgProduto1,
-  2: imgProduto2,
-  // Você pode adicionar mais imagens conforme necessário
-};
+import './ProdutoList.css'; // Certifique-se de importar o arquivo CSS
 
 function ProdutoList() {
   const [produtos, setProdutos] = useState([]);
@@ -21,7 +10,7 @@ function ProdutoList() {
   useEffect(() => {
     axios.get('https://ranekapi.origamid.dev/json/api/produto')
       .then(response => {
-        console.log(response.data); // Verifique a estrutura dos dados
+        console.log(response.data); 
         setProdutos(response.data);
         setLoading(false);
       })
@@ -36,20 +25,13 @@ function ProdutoList() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div>
-      
+    <div className='products'>
       <h2>Lista de Produtos</h2>
-      <ul>
+      <ul className='products-item'>
         {produtos.map(produto => (
-          <li key={produto.id}>
-            <h2>{produto.nome}</h2>
-            <p>{produto.descricao}</p>
+          <li key={produto.id} className='product'>
+            <h3>{produto.nome}</h3>
             <p>Preço: {produto.preco}</p>
-            <img 
-              src={imagens[produto.id] || placeholder} 
-              alt={produto.nome} 
-              style={{ width: '200px', height: 'auto' }} 
-            />
           </li>
         ))}
       </ul>
