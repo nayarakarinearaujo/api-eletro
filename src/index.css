@@ -23,7 +23,7 @@ h1 {
 
 .header {
   width: 100%;
-  background-image: url('image/fone-rosa.jpg');
+  background-image: url('image/imageHeader.jpg');
   background-size: cover;
   background-position: top center; /* Mover a imagem para cima */
   background-repeat: no-repeat;

@@ -31,7 +31,7 @@ function ProdutoList() {
         {produtos.map(produto => (
           <li key={produto.id} className='product'>
             <img 
-              src={ImageMap[produto.id] || 'default-image-path.jpg'}  // Adicione um caminho padrão, se necessário
+              src={ImageMap[produto.id] || 'default-image-path.jpg'}  
               alt={produto.nome} 
               className='product-image' 
             />

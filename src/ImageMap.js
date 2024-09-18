@@ -1,5 +1,5 @@
-import note2 from './image/note2.jpg';  
-import smartphone2 from './image/smartphone2.jpg'; 
+import note2 from './image/notebook.png';  
+import smartphone2 from './image/smarphone2.png'; 
 
 const ImageMap = {
   "notebook-3": note2,
