@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ProdutoList.css'; // Certifique-se de importar o arquivo CSS
+import ImageMap from './ImageMap'; 
+import './ProdutoList.css';
 
 function ProdutoList() {
   const [produtos, setProdutos] = useState([]);
@@ -10,7 +11,6 @@ function ProdutoList() {
   useEffect(() => {
     axios.get('https://ranekapi.origamid.dev/json/api/produto')
       .then(response => {
-        console.log(response.data); 
         setProdutos(response.data);
         setLoading(false);
       })
@@ -30,6 +30,11 @@ function ProdutoList() {
       <ul className='products-item'>
         {produtos.map(produto => (
           <li key={produto.id} className='product'>
+            <img 
+              src={ImageMap[produto.id] || 'default-image-path.jpg'}  // Adicione um caminho padrão, se necessário
+              alt={produto.nome} 
+              className='product-image' 
+            />
             <h3>{produto.nome}</h3>
             <p>Preço: {produto.preco}</p>
           </li>

@@ -22,17 +22,20 @@ h1 {
 }
 
 .header {
+  width: 100%;
   background-image: url('image/fone-rosa.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center; /* Mover a imagem para cima */
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 50vh; 
   color: white; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 80px;
 }
+
 
 h2 {
   text-align: center;

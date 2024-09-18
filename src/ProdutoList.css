@@ -13,9 +13,9 @@
     list-style-type: none; 
     padding: 0;
     margin: 0;
-    display: flex; /* Ativa o flexbox */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 10px; /* Espaço entre os itens */
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
 }
 
 /* Estilos para cada item da lista */
@@ -24,8 +24,16 @@
     border-radius: 8px;
     padding: 10px;
     background-color: #fff;
-    flex: 1 1 calc(33% - 20px); /* Ajusta a largura dos itens */
-    /* O cálculo aqui considera a margem entre os itens */
+    flex: 1 1 calc(33% - 20px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a imagem do produto */
+.product-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px;
+    margin-bottom: 10px; 
 }
 
 /* Estilos para o título do produto */
