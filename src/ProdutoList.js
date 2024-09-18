@@ -30,13 +30,14 @@ function ProdutoList() {
       <ul className='products-item'>
         {produtos.map(produto => (
           <li key={produto.id} className='product'>
+            <h3>{produto.nome}</h3>
+            <p>Preço: {produto.preco}</p>
             <img 
               src={ImageMap[produto.id] || 'default-image-path.jpg'}  
               alt={produto.nome} 
               className='product-image' 
             />
-            <h3>{produto.nome}</h3>
-            <p>Preço: {produto.preco}</p>
+            
           </li>
         ))}
       </ul>

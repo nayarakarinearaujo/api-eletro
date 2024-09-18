@@ -1,8 +1,8 @@
-import styles from './Footer.module.css'
+import './Footer.css';
 
 function Footer() {
     return (
-      <div className={styles.footer_container}>
+      <div className='footer_container '>
         <p>
           &copy; 2024 Desenvolvido por <a href="nayarakarine.com">Nayara Karine</a>
         </p>
