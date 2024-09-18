@@ -1,3 +1,4 @@
+/* Estilos gerais do corpo */
 body {
   margin: 0;
   padding: 0;
@@ -6,26 +7,29 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 h1 {
   font-size: 4rem;
   text-align: center;
-  color: #e29a9b;
+  color: #DC3015; /* Cor do texto como fallback */
   margin: 20px 0;
   font-family: 'Bebas Neue', sans-serif;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   letter-spacing: 2px;       
-  background: linear-gradient(to right, #e29a9b, #e27b7d); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  padding: 10px 0;  
-  
+  background: linear-gradient(to right,#DC3015 75%, #e29a9b 25%, #e27b7d 50%); /* Gradiente com cor predominante */
+  -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o gradiente de fundo */
+  padding: 10px 0;
 }
 
+
+
+/* Estilo do cabeçalho */
 .header {
   width: 100%;
-  background-image: url('image/imageHeader.jpg');
-  background-size: cover;
-  background-position: top center; /* Mover a imagem para cima */
+  background-image: url('image/imageHead.jpg');
+  background-size: cover; 
+  background-position: center center; 
   background-repeat: no-repeat;
   height: 50vh; 
   color: white; 
@@ -37,6 +41,7 @@ h1 {
 }
 
 
+/* Estilo do subtítulo */
 h2 {
   text-align: center;
   color: #333;
@@ -44,8 +49,57 @@ h2 {
   font-family: 'Bebas Neue', sans-serif;
 }
 
+/* Estilo da lista */
 ul {
   list-style-type: none;
-  padding-left: 0; /* Remove o espaçamento à esquerda */
+  padding-left: 0;
 }
 
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .header {
+    height: 40vh; 
+  }
+
+  h1 {
+    font-size: 3rem; 
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 35vh; 
+  }
+
+  h1 {
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 30vh; 
+  }
+
+  h1 {
+    font-size: 2rem; 
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    height: 25vh; 
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
