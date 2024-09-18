@@ -1,4 +1,5 @@
 import ProdutoList from './ProdutoList';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <h1>MegaTech</h1>
         <ProdutoList/>
       </div>
+      < Footer />
     </div>
   );
 }

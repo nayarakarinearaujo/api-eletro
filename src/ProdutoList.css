@@ -2,11 +2,11 @@
 
 /* Estilos para o contêiner principal */
 .products {
-    margin: 20px auto; /* Centraliza o contêiner horizontalmente com margem automática */
+    margin: 20px auto; 
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 6px;
-    max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+    max-width: 1200px; 
 }
 
 /* Estilos para a lista de produtos */
@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: wrap; 
     gap: 10px; 
-    justify-content: center; /* Centraliza os itens dentro da lista */
+    justify-content: center; 
 }
 
 /* Estilos para cada item da lista */
@@ -29,7 +29,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33% - 20px); 
     max-width: calc(33% - 20px); 
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    box-sizing: border-box; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Efeito hover para o item de produto */
+.product:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Estilos para a imagem do produto */
@@ -58,14 +65,14 @@
 /* Regras de mídia para responsividade */
 @media (max-width: 992px) {
     .product {
-        flex: 1 1 calc(50% - 20px); /* Ajusta para dois itens por linha em telas menores */
+        flex: 1 1 calc(50% - 20px); 
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .product {
-        flex: 1 1 100%; /* Ajusta para um item por linha em telas ainda menores */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 }

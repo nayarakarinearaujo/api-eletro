@@ -1,0 +1,19 @@
+.footer_container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 1px;
+    background-color: #010101;
+    color: #fff;
+  }
+  
+  .footer_container a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer_container a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
